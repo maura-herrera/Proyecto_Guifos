@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, inicial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/styles.css"
+      id="topicid"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/normalizado.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>App Captura Guifos</title>
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <p class="bienvenida">
+          ¡Bienvenidos/as a Guifos.com! ------Donde los gifs están.//////
+          Número de visitas: 12.765.803
+        </p>
+      </div>
+      <a class="icono-regresar" href="./index.html"
+        ><img src="styles/assets/arrow.svg" alt="ícono de flecha para regresar"
+      /></a>
+      <section class="seccion-principal">
+        <div class="logo">
+          <img
+            src="styles/assets/gifOF_logo.png"
+            alt="logo gifOS light theme"
+          />
+        </div>
+        <div class="logo2">
+          <a href="./index.html"><img
+            src="styles/assets/gifOF_logo_dark.png"
+            alt="logo gifOS night theme"
+          /></a>
+        </div>
+      </section>
+    
+    <section class="ventana-info" id="ventana-info1">
+      <div class="encabezado-aviso" id="encabezado-aviso">Crear Guifos</div>
+      <img
+        src="styles/assets/window_img.png"
+        alt="ícono de ventana"
+        id="icono-ventana"
+      />
+      <h1>Aquí podrás crear tus propios guifos</h1>
+      <p>
+        Crear tu <em>guifo</em> es muy fácil, graba cualquier imagen con tu
+        cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:
+        <br />
+        <br />
+        1) Dar permisos de <strong>acceso</strong> a la cámara (sólo por el
+        tiempo de uso)<br />
+        <br />
+        2) Capturar tu momento guifo <br />
+        <br />
+        3) Revisar el momento <br />
+        <br />
+        4)Listo para subir y compartir! <br />
+        <br />
+        ¿Quieres comenzar a crear tu guifo ahora?
+      </p>
+      <div class="botones-crear-guifos">
+        <a class="btn-pre-gif" id="btn-cancel" href="./index.html">Cancelar</a>
+        <a
+          class="btn-pre-gif"
+          id="btn-star"
+          href="#"
+          onclick="document.getElementById('ventana-info1').style.display='none'; document.getElementById('container-video1').style.display='block';"
+          >Comenzar</a
+        >
+      </div>
+    </section>
+
+    <section class="container-video" id="container-video1">
+      <div class="encabezado-aviso" id="encabezado1">
+        Un Chequeo Antes de Empezar
+        <a class="icono-salir" href="./index.html">
+          <img src="styles/assets/button3.svg" alt="Cancelar"
+        /></a>
+      </div>
+
+      <div class="encabezado-aviso" style="display: none;" id="encabezado2">
+        Capturando Tu Guifo
+        <a class="icono-salir" href="./index.html">
+          <img src="styles/assets/button3.svg" alt="Cancelar"
+        /></a>
+      </div>
+
+      <div class="encabezado-aviso" style="display: none;" id="encabezado3">
+        Vista Previa
+        <a class="icono-salir" href="./index.html">
+          <img src="styles/assets/button3.svg" alt="Cancelar"
+        /></a>
+      </div>
+
+      <div class="encabezado-aviso" style="display: none;" id="encabezado4">
+        Subiendo Guifo
+        <a class="icono-salir" href="./index.html">
+          <img src="styles/assets/button3.svg" alt="Cancelar"
+        /></a>
+      </div>
+
+      <div id="div-video"><video id="camara-guifos"></video></div>
+      <img
+        src="#"
+        id="imagen-previa"
+        class="imagen-previa"
+        style="display: none;"
+        alt="imagen previa"
+      />
+
+      <div id="esperando-subida" class="imagen-previa" style="display: none;">
+        <img
+          src="styles/assets/globe_img.png"
+          id="icono-espera"
+          alt="icono espera"
+        />
+        <div class="h1-cargando">Estamos subiendo tu guifo</div>
+        <div class="barra-recording" id="barra-2">
+          <div class="rosado"></div>
+        </div>
+        <div id="texto-espera">
+          Tiempo restante: <del>38 años</del> algunos minutos
+        </div>
+      </div>
+
+      <div class="par-botones container-crear" id="containercrear1">
+        <div class="botones-guifos" id="icono-camara">
+          <img src="styles/assets/camera.svg" alt="camara icon" />
+        </div>
+        <div
+          id="capturar-video"
+          class="botones-guifos"
+          onclick="document.getElementById('encabezado1').style.display='none'; document.getElementById('encabezado2').style.display='inline-flex'; document.getElementById('containercrear1').style.display='none'; document.getElementById('containercrear2').style.display='inline-flex';"
+        >
+          Capturar
+        </div>
+      </div>
+
+      <div class="container-crear2" id="containercrear2" style="display: none;">
+        <div class="cronometro" >00:00:03:06</div>
+        <div class="par-botones container-crear" id="par-botones2">
+          <div class="botones-guifos" id="icono-recording">
+            <img src="styles/assets/recording.svg" alt="recording icon" />
+          </div>
+          <div
+            class="botones-guifos"
+            id="detener-video"
+            onclick="document.getElementById('encabezado2').style.display='none'; document.getElementById('encabezado3').style.display='inline-flex'; document.getElementById('containercrear2').style.display='none'; document.getElementById('containercrear3').style.display='inline-flex'; document.getElementById('div-video').style.display='none'; document.getElementById('imagen-previa').style.display='block';"
+          >
+            Listo
+          </div>
+        </div>
+      </div>
+
+      <div class="container-crear2" id="containercrear3" style="display: none;">
+        <div id="botones-izq">
+          <div class="cronometro">00:00:10:03</div>
+          <div id="par-botones-barra">
+            <div id="icono-play"><img src="styles/assets/forward.svg" alt="play icon" /></div>
+            <div class="barra-recording">
+              <div class="rosado"></div>
+            </div>
+          </div>
+        </div>
+        <div id="botones-derecha">
+          <div
+            class="btn-pre-gif"
+            id="repetir-captura"
+            onclick="document.getElementById('encabezado3').style.display='none'; document.getElementById('encabezado1').style.display='inline-flex'; document.getElementById('containercrear3').style.display='none'; document.getElementById('containercrear1').style.display='inline-flex'; document.getElementById('imagen-previa').style.display='none'; document.getElementById('div-video').style.display='block';"
+          >
+            Repetir captura
+          </div>
+
+          <div
+            class="btn-pre-gif"
+            id="subir-guifo"
+            onclick="document.getElementById('encabezado3').style.display='none'; document.getElementById('encabezado4').style.display='inline-flex'; document.getElementById('containercrear3').style.display='none'; document.getElementById('container-espera').style.display='inline-flex'; document.getElementById('esperando-subida').style.display='block'; "
+          >
+            Subir guifo
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="par-botones container-crear"
+        id="container-espera"
+        style="display: none;"
+      >
+        <div
+          id="cancelar-btn"
+          class="botones-guifos btn-pre-gif"
+          onclick="document.getElementById('encabezado1').style.display='none'; document.getElementById('encabezado2').style.display='inline-flex'; document.getElementById('containercrear1').style.display='none'; document.getElementById('containercrear2').style.display='inline-flex';"
+        >
+          Cancelar
+        </div>
+      </div>
+    </section>
+
+    <section id="guifo-listo">
+      <div class="encabezado-aviso" id="aviso-listo">
+        Guifo Subido Con Éxito
+        <a class="icono-salir" href="./index.html">
+          <img src="styles/assets/button3.svg" alt="Cancelar"
+        /></a>
+      </div>
+
+      <div id="imagen-texto">
+        <div class="imagen-mini">
+          <img
+            src="#"
+            id="imagen-previa-miniatura"
+            class="imagen-previa-miniatura"
+            alt="miniatura de imagen previa"
+          />
+        </div>
+        <div id="ultimos-botones">
+          <div class="h1-cargando" id="texto-listo">Guifo creado con éxito</div>
+          <div class="btn-pre-gif ult-btn" id="btn-copy-link">Copiar Enlace Guifo</div>
+          <div class="btn-pre-gif ult-btn" id="btn-download-gif">Descargar Guifo</div>
+        </div>
+      </div>
+      <a class="btn-pre-gif" id="btn-listo" href="./index.html">Listo</a>
+    </section>
+
+    <section class="mis-guifos">
+      <div class="title-mis-guifos">
+        <h2>Mis guifos</h2>
+      </div>
+      <div class="guifos-creados" id="guifos-creados"></div>
+    </section>
+</header>
+    <script src="js/javascript.js"></script>
+    <script src="js/UI.js"></script>
+    <script src="js/recording.js"></script>
+    <script src="js/misGuifos.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+
+  </body>
+</html>

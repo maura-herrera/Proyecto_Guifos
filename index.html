@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, inicial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/styles.css"
+      id="theme"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/normalizado.css" />
+    <link rel="import" href="./index2.html" id="pag-captura" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>App Guifos</title>
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <p class="bienvenida">
+          ¡Bienvenidos/as a Guifos.com! ------Donde los gifs están.////// Número
+          de visitas: 12.765.803
+        </p>
+      </div>
+      <section class="seccion-principal">
+        <div class="logo">
+          <a href="./index.html"><img
+            src="styles/assets/gifOF_logo.png"
+            alt="logo gifOS light theme"
+          /></a>
+        </div>
+        <div class="logo2">
+          <a href="./index.html"><img
+            src="styles/assets/gifOF_logo_dark.png"
+            alt="logo gifOS night theme"
+          /></a>
+        </div>
+        <div class="botones">
+          <a class="primeros-botones" href="./index2.html" id="boton-crear-guifosindex">Crear GuifOS</a>
+          <div class="boton-desplegable">
+            <div class="par-botones">
+              <div class="primeros-botones" id="botones-juntos">
+                Elegir tema
+              </div>
+
+              <button class="primeros-botones" id="dropdown">
+                <img src="styles/assets/dropdown.svg" alt="icono dropdown" />
+              </button>
+
+            </div>
+            <!--<button onclick="document.getElementById('submenu').style.display='block'"></button>-->
+            <div class="submenu" id="submenu" style="display: none;">
+              <a class="botones-temas" id="dia">Sailor Day</a>
+              <a class="botones-temas" id="noche">Sailor Night</a>
+            </div>
+          </div>
+          <div id="div-mis-guifos-enlace">
+          <a id="link-mis-guifos" href="#">Mis Guifos</a>
+          <div id="rayita"></div>
+          </div>
+        </div>
+      </section>
+      <section id="seccion-a-ocultar">
+      <section class="container-busqueda">
+        <div class="cabecera-busqueda"><h2>Buscar</h2></div>
+        <div id="barras-alineadas">
+          <div class="barra-busqueda">
+            <input
+              id="barra-busqueda-id"
+              type="text"
+              name="busqueda"
+              placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+            />
+          </div>
+          <a id="boton-buscar"><img id="lupa-inactive" src="styles/assets/lupa_inactive.svg" alt="lupa inactiva" /><img id="lupa-active" style="display: none;"  src="styles/assets/lupa.svg" alt="lupa activa" />Buscar</a>
+          
+        </div>
+        <div id="container-palabras-busqueda" style="display: none;">
+        <div id="sugerencias-barra" class="sugerencias-barra">
+          <ul id="seleccionaresteul" class="seleccionaresteul"></ul>
+        </div>
+        </div>
+        <div
+        class="div-hashTag"
+        id="div-hashTag"
+        style="display: none;"
+        >
+          <ul id="ulversion2" class="ulversion2"></ul>
+        </div>
+      </section>
+      <section id="section-movil">
+          <section class="sugerencias" id="sugerencias">
+            <div class="te-sugerimos">
+              <h2 class="te-sugerimos-h2">Hoy te sugerimos:</h2>
+            </div>
+
+            <div class="resultados-sugeridos" id="resultados-sugeridos"></div>
+          </section>
+
+          <section class="tendencias">
+            <div class="title-tendencias">
+              <h2>Tendencias:</h2>
+            </div>
+            <div class="guifos-tendencias" id="guifos-tendencias">
+            </div>
+          </section>
+      </section>
+    </section>
+
+    <section class="mis-guifos" id="mis-guifos" style="display: none">
+      <div class="title-mis-guifos">
+        <h2>Mis guifos</h2>
+      </div>
+      <div class="guifos-creados" id="guifos-creados"></div>
+    </section>
+
+        </header>
+        <script src="js/javascript.js"></script>
+        <script src="js/UI.js"></script>
+        <script src="js/app.js"></script>
+        <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+  </body>
+</html>
