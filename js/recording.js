@@ -10,8 +10,10 @@ function obtenerStream() {
   const videoConstraints = {
     audio: false,
     video: {
-      width: { exact: 832 },
-      height: { exact: 440 },
+      width: { min: 1 },
+      height: { min: 1 },
+    // width: { exact: 832 },
+    // height: { exact: 440 },
     },
   };
   navigator.mediaDevices
